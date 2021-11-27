@@ -17,28 +17,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$font: 'Times New Roman', 'Times', serif;
+$color: #FFFFF0;
+
 
  body {
-   background-color: #90ee90;
-   color: #000000;
-   font-family: verdana, arial, helvetica, sans-serif;
-   font-size: 13px;
-   line-height: 18px;
- }
-
- pre {
-   background-color: #fff0f5;
+   font-family: $font;
+   background-color: $color;
+   # font-size: 13px;
+   # line-height: 18px;
+   margin: 10px;
    padding: 10px;
-   font-size: 11px;
+   text-align: center;
  }
-
- header {
-   background-color: #f0e68c;
-   height: 100px;
-   border: 10px;
-   color: #000000;
 
  h1 {
-   text-align: center;
-   padding-top: 40px;
- }}
+  text-align: center;
+  padding-top: 40px;
+ }

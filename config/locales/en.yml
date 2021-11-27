@@ -32,3 +32,8 @@
 en:
   app_title: Art.ea.istic
   app_description: Art journal for keeping track of favourite pieces of art.
+
+  home:
+    home:
+      title: Welcome to Art.ea.istic! :)
+      welcome: Here you can keep track of interesting pieces of art and draw inspiration from the work of famous artists.

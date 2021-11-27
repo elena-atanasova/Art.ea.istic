@@ -30,4 +30,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Art.ea.istic
+  app_description: Art journal for keeping track of favourite pieces of art.

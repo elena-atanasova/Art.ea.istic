@@ -1,0 +1,23 @@
+= form_with(model: artwork, local: true) do |form|
+  - if artwork.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(artwork.errors.count, "error")
+        prohibited this artwork from being saved:
+      %ul
+        - artwork.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :artist
+    = form.text_field :artist
+  .field
+    = form.label :year
+    = form.number_field :year
+  .field
+    = form.label :description
+    = form.text_field :description
+  .actions
+    = form.submit

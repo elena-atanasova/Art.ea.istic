@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @artwork.name
+%p
+  %strong Artist:
+  = @artwork.artist
+%p
+  %strong Year:
+  = @artwork.year
+%p
+  %strong Description:
+  = @artwork.description
+= link_to 'Edit', edit_artwork_path(@artwork)
+|
+\#{link_to 'Back', artworks_path}

@@ -17,22 +17,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$font: 'Times New Roman', 'Times', serif;
-$color: #FFFFF0;
+$font: 'Baloo Bhaijaan 2', cursive;
+$color: #fafad2;
 
+
+h1 {
+ text-align: center;
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
 
  body {
    font-family: $font;
    background-color: $color;
-   # font-size: 13px;
-   # line-height: 18px;
-   margin: 30px;
-   padding: 10px;
-   # text-align: center;
- }
-
- h1 {
-  # text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+   font-size: 13px;
+   line-height: 18px;
+   margin: 0px;
+   padding: 0px;
  }

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def webform
+    @artwork = Artwork.new
   end
 
 end

@@ -1,11 +1,11 @@
-= form_with(model: artwork, local: true) do |form|
-  - if artwork.errors.any?
+= form_for @artwork, :html => {:id => "ArtworkForm"} do |form|
+  - if @artwork.errors.any?
     #error_explanation
       %h2
-        = pluralize(artwork.errors.count, "error")
+        = pluralize(@artwork.errors.count, "error")
         prohibited this artwork from being saved:
       %ul
-        - artwork.errors.full_messages.each do |message|
+        - @artwork.errors.full_messages.each do |message|
           %li= message
   .field
     = form.label :name

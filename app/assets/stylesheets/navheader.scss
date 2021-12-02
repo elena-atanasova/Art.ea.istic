@@ -1,9 +1,12 @@
+$colour: #f0e68c;
+$hover-colour: #fafad2;
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f0e68c;
+  background-color: $colour;
 }
 
 li {
@@ -18,10 +21,6 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #fafad2;
-}
-
-.active {
-  background-color: #fafad2;
+li a:hover {
+  background-color: $hover-colour;
 }

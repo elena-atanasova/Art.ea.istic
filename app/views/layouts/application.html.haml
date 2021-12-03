@@ -20,9 +20,13 @@
     - if content_for?(:head)
       = yield(:head)
 
+    - if content_for?(:foot)
+      = yield(:foot)
+
   %body
 
     - flash.each do |key, value|
       = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
     =render('shared/header')
+    =render('shared/footer')
     = yield

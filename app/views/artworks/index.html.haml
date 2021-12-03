@@ -1,25 +1,13 @@
 %h1 Artworks
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Artist
-      %th Year
-      %th Description
-
-  %tbody
-    - @artworks.each_with_index do |artwork, i|
-      - row_class = ""
-      - if i % 2 == 0
-        - row_class = "even"
-      - else
-        - row_class = "odd"
-
-      %tr
-        %td{:class => "#{row_class}"}= artwork.name
-        %td{:class => "#{row_class}"}= artwork.artist
-        %td{:class => "#{row_class}"}= artwork.year
-        %td{:class => "#{row_class}"}= artwork.description
-
-%br
+%dl
+  - @artworks.each do |artwork|
+    %li
+      = "'" + artwork.name + "'"
+      %ul
+        = "Artist: " + artwork.artist
+      %ul
+        = "Year: " + artwork.year.to_s
+      %ul
+        = "Description: " + artwork.description
+      -# %ul
+      -# = link_to "Hide", "", class:'hide', data: {'js-hide-link' => true}

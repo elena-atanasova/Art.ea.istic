@@ -53,6 +53,7 @@ class ExhibitionsController < ApplicationController
     @exhibition.destroy
     respond_to do |format|
       format.html { redirect_to exhibitions_url, notice: "Exhibition was successfully destroyed." }
+      format.js { flash[:notice] = "Exhibition was successfully destroyed." }
       format.json { head :no_content }
     end
   end

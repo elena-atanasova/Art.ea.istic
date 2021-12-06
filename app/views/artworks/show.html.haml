@@ -11,6 +11,9 @@
 %p
   %strong Description:
   = @artwork.description
+
+%p= link_to 'Add Review', new_review_path(artwork_id: @artwork)
+
 = link_to 'Edit', edit_artwork_path(@artwork)
 |
 \#{link_to 'Back', artworks_path}

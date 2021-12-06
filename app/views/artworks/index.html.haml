@@ -7,6 +7,9 @@
       %th Artist
       %th Year
       %th Description
+      %th
+      %th
+      %th
 
   %tbody
     - @artworks.each_with_index do |artwork, i|
@@ -21,5 +24,8 @@
         %td{:class => "#{row_class}"}= artwork.artist
         %td{:class => "#{row_class}"}= artwork.year
         %td{:class => "#{row_class}"}= artwork.description
+        %td= link_to 'Add Review', artwork
+        %td= link_to 'Edit', edit_artwork_path(artwork)
+        %td= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+
   resources :exhibitions
   resources :reviews
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  root 'home#home'
   resources :artworks
+
+  root 'home#home'
 
   get 'addartwork', to: 'home#webform'
   get 'contact', to: 'home#contact'

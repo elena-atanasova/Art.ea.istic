@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Artwork:
+  = @exhibition.artwork.name
+%p
+  %b Venue:
+  = @exhibition.venue
+
+= link_to 'Edit', edit_exhibition_path(@exhibition)
+\|
+= link_to 'Back', exhibitions_path

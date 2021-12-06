@@ -1,0 +1,17 @@
+= form_for @exhibition do |f|
+  - if @exhibition.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@exhibition.errors.count, "error")} prohibited this exhibition from being saved:"
+      %ul
+        - @exhibition.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :artwork
+    %p= @exhibition.artwork.name
+    =f.hidden_field :artwork_id, value: @exhibition.artwork.id
+  .field
+    = f.label :venue
+    = f.text_field :venue
+  .actions
+    = f.submit 'Save'

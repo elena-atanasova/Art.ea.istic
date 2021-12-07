@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_12_06_151308) do
 
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-    t.integer "art_num"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "artworks", force: :cascade do |t|
     t.string "name"
     t.string "artist"

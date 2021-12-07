@@ -24,8 +24,8 @@
         %td{:class => "#{row_class}"}= artwork.artist
         %td{:class => "#{row_class}"}= artwork.year
         %td{:class => "#{row_class}"}= artwork.description
-        %td= link_to t('.show'), artwork
-        %td= link_to t('.edit'), edit_artwork_path(artwork)
-        %td= link_to t('.destroy'), artwork, method: :delete, data: { confirm: 'Are you sure?' }
+        %td{:class => "#{row_class}"}= link_to t('.show'), artwork
+        %td{:class => "#{row_class}"}= link_to t('.edit'), edit_artwork_path(artwork)
+        %td{:class => "#{row_class}"}= link_to t('.destroy'), artwork, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br

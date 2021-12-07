@@ -7,7 +7,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
     assert_select 'title', 'Art.ea.istic'
     assert_select 'h1', 'Welcome to Art.ea.istic! :)'
-    assert_select 'p', 'Here you can keep track of interesting pieces of art and draw inspiration from the work of famous artists.'
+    assert_select 'p', 'The perfect place to share interesting works of art, find out where they have been exhibited, and add reviews.'
   end
 
   test "should get contact" do

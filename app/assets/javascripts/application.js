@@ -22,24 +22,27 @@ function ValidateArtworkForm()
 {
   $('#ArtworkForm').validate({
     rules: {
-      artwork[name]: {required: true},
-      artwork[artist]: {required: true},
-      artwork[year]: {
+      'artwork[name]': {required: true},
+      'artwork[artist]': {required: true},
+      'artwork[year]': {
         required: true,
         digits: true,
-        range: [0, 2021]
+        range: [0, 2021],
       },
-      artwork[description]: {required: true}
+      'artwork[description]': {
+        required: true,
+      }
     },
     messages: {
-      artwork[name]: {required: "You must enter the artwork's name"},
-      artwork[artist]: {required: "You must enter the artworks's artist"},
-      artwork[year]: {
+      'artwork[name]': {required: "You must enter the artwork's name",},
+      'artwork[artist]': {required: "You must enter the artworks's artist",},
+      'artwork[year]': {
         required: "The artwork's year of creation is required",
         digits: "The year should be a number between 0 and 2021",
         range: "The year should be a number between 0 and 2021",
       },
-      artwork[description]: {required: "You must enter a description of the artwork"}
+      'artwork[description]': {
+        required: "You must enter a description of the artwork",},
     }
   });
 }

@@ -47,10 +47,49 @@ function ValidateArtworkForm()
   });
 }
 
+function ValidateExhibitionForm()
+{
+  $('#ExhibitionForm').validate({
+    rules: {
+      'exhibition[artwork]': {required: true},
+      'exhibition[venue]': {required: true},
+    },
+
+    messages: {
+      'exhibition[artwork]': {required: "You must enter the name of the artwork to be exhibited",},
+      'exhibition[venue]': {required: "You must enter the exhibition's venue",},
+  });
+}
+
+function ValidateReviewForm()
+{
+  $('#ReviewForm').validate({
+    rules: {
+      'review[artwork]': {required: true},
+      'review[review]': {required: true},
+    },
+
+    messages: {
+      'review[artwork]': {required: "You must enter the name of the artwork to be reviewed",},
+      'review[review]': {required: "You must enter the artwork's review",},
+  });
+}
+
 $(document).ready(function() {
 
   if(document.getElementById('ArtworkForm'))
   {
     ValidateArtworkForm();
   }
+
+  if(document.getElementById('ExhibitionForm'))
+  {
+    ValidateExhibitionForm();
+  }
+
+  if(document.getElementById('ReviewForm'))
+  {
+    ValidateReviewForm();
+  }
+
 });

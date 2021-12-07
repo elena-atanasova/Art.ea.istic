@@ -14,8 +14,8 @@
       %tr
         %td= exhibition.artwork.name
         %td= exhibition.venue
-        %td= link_to 'Show', exhibition
-        %td= link_to 'Edit', edit_exhibition_path(exhibition)
-        %td= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), exhibition
+        %td= link_to t('.edit'), edit_exhibition_path(exhibition)
+        %td= link_to t('.destroy'), exhibition, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br

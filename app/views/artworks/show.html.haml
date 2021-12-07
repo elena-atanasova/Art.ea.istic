@@ -18,9 +18,9 @@
     - @artwork.reviews.each do |review|
       %tr{id: "review_#{review.id}"}
         %td= review.review
-        %td= link_to 'Show', review
-        %td= link_to 'Edit', edit_review_path(review)
-        %td= link_to 'Destroy', review, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
+        %td= link_to t('.show'), review
+        %td= link_to t('.edit'), edit_review_path(review)
+        %td= link_to t('.destroy'), review, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
 
 %p= link_to 'Add Review', new_review_path(artwork_id: @artwork)
 
